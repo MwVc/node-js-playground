@@ -1,0 +1,20 @@
+{
+  "name": "js-playground",
+  "version": "1.0.0",
+  "description": "Learning Node.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Victor Mwadime <victormwadime@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

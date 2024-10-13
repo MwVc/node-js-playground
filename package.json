@@ -2,10 +2,10 @@
   "name": "js-playground",
   "version": "1.0.0",
   "description": "Learning Node.js",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "dev": "nodemon serve.js",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "Victor Mwadime <victormwadime@gmail.com>",

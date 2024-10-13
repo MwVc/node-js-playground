@@ -5,9 +5,9 @@
 //      4. CommonJS modules instead of ES6 modules
 //      5. Missing some JS APIs like fetch
 
-const os = require("os");
-const path = require("path");
-const { add, subtract, divide, modulo } = require("./math");
+// const os = require("os");
+// const path = require("path");
+// const { add, subtract, divide, modulo } = require("./math");
 
 // console.log(path.dirname(__filename));
 // console.log(path.basename(__filename));

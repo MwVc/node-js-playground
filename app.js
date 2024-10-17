@@ -5,3 +5,8 @@
 // require      - function to use modules(CommonJS)
 // modules      - info about current module(file)
 // process      - info about enviroment where the program is being executed
+
+const names = require("./names");
+const sayHi = require("./module_one");
+
+sayHi(names.peter);

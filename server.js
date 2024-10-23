@@ -1,16 +1,23 @@
 import http from "http";
 const PORT = process.env.PORT;
+import fs from "fs/promises";
+import path from "path";
+import url from "url";
+
+// Get current path
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const server = http.createServer((req, res) => {
   try {
     //  Check if GET request
     if (req.method === "GET") {
+      let filePath;
+
       if (req.url === "/") {
-        res.writeHead(200, { "Content-Type": "text/html" });
-        res.end("<h1>This is my personal homepage</h1>");
+        filePath = path.join(__dirname, "public", "index.html");
       } else if (req.url === "/about") {
-        res.writeHead(200, { "Content-Type": "text/html" });
-        res.end("<h1>This is my personal homepage</h1>");
+        filePath = path.join(__dirname, "public", "about.html");
       } else {
         res.writeHead(404, { "Content-Type": "text/html" });
         res.end(`<h1>Page Not Found!!</h1>

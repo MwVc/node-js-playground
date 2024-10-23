@@ -4,7 +4,7 @@
   "description": "Learning Node.js",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon asynchronous.js",
+    "dev": "nodemon HTTP-request.js",
     "start": "node server.js"
   },
   "keywords": [],
@@ -12,6 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "date-fns": "^4.1.0",
+    "lodash": "^4.17.21",
     "uuid": "^10.0.0"
   },
   "devDependencies": {

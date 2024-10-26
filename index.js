@@ -1,4 +1,3 @@
-import { generateRandomNumber, celsciusToFarenheit } from "./utilities.js";
+require("dotenv").config();
 
-console.log(`Random Number: ${generateRandomNumber()}`);
-console.log(`Celscius to Farenheit: ${celsciusToFarenheit(38)}`);
+console.log(process.env.VIDEO_URL);

@@ -1,17 +1,11 @@
 const { log } = require("console");
-const os = require("os");
-const { createSecureContext } = require("tls");
+const http = require("http");
 
-const user = os.userInfo();
+const server = http.createServer();
+server.on("request", (req, res) => {
+  res.end("I am serving you");
+});
 
-// Returns the system uptime in seconds
-log(os.uptime());
-
-const currentOS = {
-  name: os.type(),
-  release: os.release(),
-  totalmem: os.totalmem(),
-  freeMem: os.freemem(),
-};
-
-console.log(currentOS);
+server.listen(9090, () => {
+  console.log("You have been served");
+});

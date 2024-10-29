@@ -1,11 +1,13 @@
-const http = require("http");
+const EventEmitter = require("events");
 
-const server = http.createServer((req, res) => {
-  if (req.url === "/favicon.ico") {
-    res.end("n");
-  } else {
-    res.end("This is the page that you are not looking for");
-  }
+const customEmitter = new EventEmitter();
+
+customEmitter.on("response", (name, age) => {
+  console.log(`data received. Name: ${name}, Age: ${age}`);
 });
 
-server.listen(8080);
+customEmitter.on("response", (name, id) => {
+  console.log(name, id);
+});
+
+customEmitter.emit("response", "john", 34);
